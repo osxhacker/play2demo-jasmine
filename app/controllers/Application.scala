@@ -53,11 +53,11 @@ object Application extends Controller {
       )
     )
 
-    def reads(json: JsValue): Task = Task(
+    def reads(json: JsValue): JsResult[Task] = JsSuccess (Task(
       id = (json \ "id").as[Int],
       text = (json \ "text").as[String],
       done = (json \ "done").as[Boolean]
-    )
+    ))
   }
 
   //returns a list of tasks as json
