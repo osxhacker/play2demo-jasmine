@@ -26,9 +26,9 @@ describe('TodoCtrl controllers', function() {
     });
 
     // Import the definition of the services to the test, to be able to test the REST calls
-    beforeEach(module('todoServices'));
+    beforeEach(angular.module('todoServices'));
     // Import the definition of the controllers
-    beforeEach(module('todoControllers'));
+    beforeEach(angular.module('todoControllers'));
 
     // Run test
     describe('TodoCtrl', function(){
